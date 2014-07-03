@@ -1,0 +1,28 @@
+{
+    "type" : "rabbitmq",
+    "rabbitmq" : {
+        "host" : "localhost",
+        "port" : 5672,
+        "user" : "aswindevps",
+        "pass" : "as382de",
+        "vhost" : "/",
+        "queue" : "queue2",
+        "exchange" : "logs",
+        "routing_key" : "key2",
+        "exchange_declare" : false,
+        "exchange_type" : "direct",
+        "exchange_durable" : false,
+        "queue_declare" : false,
+        "queue_bind" : true,
+        "queue_durable" : false,
+        "queue_auto_delete" : false
+    },
+    "index" : {
+        "name": "rabbit",
+        "type" : "log",
+        "bulk_size" : 100,
+        "bulk_timeout" : "10ms",
+        "ordered" : false
+    }
+}
+

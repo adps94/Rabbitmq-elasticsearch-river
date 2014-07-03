@@ -1,0 +1,15 @@
+{
+  "settings" : {
+      "number_of_shards" : 5
+  },
+  "mappings" : {
+    "pin" : {
+      "_all" : {"enabled" : false}, 
+          Properties:{  
+             "location": {"type" : "geo_point"},
+            "timestamp":{"type":"integer"}
+       } 
+    }
+  }    
+}
+
