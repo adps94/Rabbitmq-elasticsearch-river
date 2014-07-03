@@ -3,7 +3,7 @@
       "number_of_shards" : 5
   },
   "mappings" : {
-    "pin" : {
+    "log" : {
       "_all" : {"enabled" : false}, 
           Properties:{  
              "location": {"type" : "geo_point"},
