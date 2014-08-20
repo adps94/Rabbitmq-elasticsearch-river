@@ -1,15 +1,65 @@
-{
-  "settings" : {
-      "number_of_shards" : 5
-  },
-  "mappings" : {
-    "log" : {
-      "_all" : {"enabled" : false}, 
-          Properties:{  
-             "location": {"type" : "geo_point"},
-            "timestamp":{"type":"integer"}
-       } 
+ {
+  "rabbit4" : {
+    "mappings" : {
+      "pin" : {
+        "properties" : {
+          "det" : {
+            "properties" : {
+              "emp" : {
+                "type" : "string"
+              },
+              "stops_rem" : {
+                "properties" : {
+                  "place" : {
+                    "type" : "string"
+                  },
+                  "sch_time" : {
+                    "type" : "string"
+                  },
+                  "stop_seq" : {
+                    "type" : "long"
+                  }
+                }
+              },
+              "stops_visited" : {
+                "properties" : {
+                  "arrival_time" : {
+                    "type" : "long"
+                  },
+                  "place" : {
+                    "type" : "string"
+                  },
+                  "sch_time" : {
+                    "type" : "string"
+                  },
+                  "stop_seq" : {
+                    "type" : "long"
+                  }
+                }
+              },
+              "trip_id" : {
+                "type" : "string"
+              }
+            }
+          },
+          "employees" : {
+            "type" : "string"
+          },
+          "location" : {
+            "properties" : {
+              "type" : "geo_point"              
+            }
+          },
+          "timestamp" : {
+            "type" : "long"
+          },
+          "trip_id" : {
+            "type" : "string"
+          }
+        }
+      }
     }
-  }    
+  }
 }
+
 
